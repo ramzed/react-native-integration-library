@@ -32,8 +32,8 @@ export class PrintableBarcode {
  * @param {string} uri - Путь к ресурсу с изображением. Например: "android.resource://com.revotor/drawable/ic_launcher".
  */
 export class PrintableImage {
-    constructor(uri: string) {
-        this.type = 'IMAGE';
+    constructor(uri: string, sourceType: string = "IMAGE") {
+        this.type = sourceType; // IMAGE or IMAGEURI
         this.uri = uri;
     }
 }
